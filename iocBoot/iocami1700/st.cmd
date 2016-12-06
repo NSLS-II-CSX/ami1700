@@ -16,8 +16,8 @@ epicsEnvSet("EPICS_CA_ADDR_LIST" ,      "10.23.0.255")
 epicsEnvSet("STREAM_PROTOCOL_PATH"    , "$(TOP)/protocols")
 
 drvAsynIPPortConfigure("AMI1", "10.23.3.64:7180")
-asynSetTraceMask("AMI1", 0, 0x9)
-asynSetTraceIOMask("AMI1", 0, 0x2)
+#asynSetTraceMask("AMI1", 0, 0x9)
+#asynSetTraceIOMask("AMI1", 0, 0x2)
 
 ## Load record instances
 dbLoadRecords("$(TOP)/db/ami1700.db","Sys=XF:23ID1-ES,Dev={HeMeter},PORT=AMI1")
