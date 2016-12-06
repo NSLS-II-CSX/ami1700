@@ -1,0 +1,66 @@
+record(ai, "$(Sys)$(Dev)Val:He-I"){
+	field(DTYP, "stream")
+	field(INP,  "@ami1700.proto readFloat(MEAS:HE:LEV?) $(PORT)")
+	field(SCAN, "1 second")
+	field(PREC, "1")
+	field(EGU,  "%")
+}
+
+record(ai, "$(Sys)$(Dev)Val:ADC0-I"){
+	field(DTYP, "stream")
+	field(INP,  "@ami1700.proto readFloat(MEAS:ADC0?) $(PORT)")
+	field(SCAN, "1 second")
+	field(PREC, "1")
+	field(EGU,  "V")
+}
+
+record(ai, "$(Sys)$(Dev)Val:ADC1-I"){
+	field(DTYP, "stream")
+	field(INP,  "@ami1700.proto readFloat(MEAS:ADC1?) $(PORT)")
+	field(SCAN, "1 second")
+	field(PREC, "1")
+	field(EGU,  "V")
+}
+
+record(ai, "$(Sys)$(Dev)Val:ADC2-I"){
+	field(DTYP, "stream")
+	field(INP,  "@ami1700.proto readFloat(MEAS:ADC2?) $(PORT)")
+	field(SCAN, "1 second")
+	field(PREC, "1")
+	field(EGU,  "mA")
+}
+
+record(ai, "$(Sys)$(Dev)Val:Int-RB"){
+	field(DTYP, "stream")
+	field(INP,  "@ami1700.proto readFloat(HE:INTERVAL?) $(PORT)")
+	field(SCAN, "1 second")
+	field(PREC, "3")
+	field(EGU,  "mins")
+}
+
+record(ao, "$(Sys)$(Dev)Val:Int-SP"){
+	field(DTYP, "stream")
+	field(OUT,  "@ami1700.proto writeFloat(CONF:INT:SAMP) $(PORT)")
+	field(PREC, "3")
+	field(EGU,  "mins")
+}
+
+record(ao, "$(Sys)$(Dev)Val:IntLimit-RB"){
+	field(DTYP, "stream")
+	field(OUT,  "@ami1700.proto writeFloat(CONF:HE:TIME_LIMIT) $(PORT)")
+	field(PREC, "3")
+	field(EGU,  "mins")
+}
+
+record(bo, "$(Sys)$(Dev)Cmd:Read-Cmd"){
+	field(DTYP, "stream")
+	field(OUT,  "@ami1700.proto triggerSample $(PORT)")
+}
+
+record(bo, "$(Sys)$(Dev)Mode:Sample-Sel"){
+	field(DTYP, "stream")
+	field(OUT,  "@ami1700.proto setSample $(PORT)")
+	field(ZNAM, "Sample")
+	field(ONAM, "Continuous")
+}
+

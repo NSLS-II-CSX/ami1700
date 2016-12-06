@@ -1,0 +1,21 @@
+Terminator = CR LF;
+
+readFloat {
+	out "\$1";
+	in "%f";
+}
+
+triggerSample {
+	out "MEAS:HE:SAMP";
+	in "";
+}
+
+setSample {
+	out "MEAS:HE:%{HOLD|CONT}";
+	in "";
+}
+
+writeFloat {
+	out "\$1 %f";
+	in "";
+}
