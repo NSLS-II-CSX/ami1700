@@ -45,7 +45,7 @@ record(ao, "$(Sys)$(Dev)Val:Int-SP"){
 	field(EGU,  "mins")
 }
 
-record(ao, "$(Sys)$(Dev)Val:IntLimit-RB"){
+record(ao, "$(Sys)$(Dev)Val:IntLimit-SP"){
 	field(DTYP, "stream")
 	field(OUT,  "@ami1700.proto writeFloat(CONF:HE:TIME_LIMIT) $(PORT)")
 	field(PREC, "3")
