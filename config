@@ -1,4 +1,4 @@
-NAME=es-ami1700
+NAME=ami1700
 USER=softioc
-PORT=5015
-HOST=xf23id1-ioc3
+PORT=6011
+HOST=xf02id1-ioc1
